@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daybreak: search the latest news by topic</title>
+<meta name="description" content="Search today's news or browse the latest stories in Technology, Finance, Crypto, Gaming, Music, Sports, Science, Health, Business and World News.">
+<meta name="theme-color" content="#0b6b5f">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<a class="skip" href="#results">Skip to stories</a>
+<header class="top">
+  <a class="brand" href="/" aria-label="Daybreak home"><span class="sun" aria-hidden="true"></span>Daybreak</a>
+  <nav aria-label="Main"><a href="/">Home</a><a href="#about">About</a></nav>
+</header>
+<main>
+  <section class="hero">
+    <h1>Search today’s news</h1>
+    <form id="search" role="search">
+      <label for="q" class="sr">Search the latest news</label>
+      <input id="q" name="q" type="search" maxlength="100" placeholder="Search the latest news…" autocomplete="off" enterkeyhint="search">
+      <button type="submit">Search</button>
+    </form>
+    <div id="sectors" class="sectors" role="group" aria-label="News sectors"></div>
+  </section>
+  <section aria-labelledby="heading">
+    <div class="bar"><h2 id="heading">Top stories</h2><button id="clear" type="button" hidden>Clear filters</button></div>
+    <div id="results" tabindex="-1" aria-live="polite"></div>
+  </section>
+</main>
+<footer id="about">
+  <h2>About Daybreak</h2>
+  <p>Daybreak helps you find current stories across ten sectors. Each card links to the original publisher’s article, which opens in a new tab. Headlines and summaries come from a news API and are shown as provided.</p>
+</footer>
+<script src="/app.js" type="module"></script>
+</body>
+</html>
